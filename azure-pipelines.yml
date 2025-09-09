@@ -3,6 +3,13 @@
 # Add steps that analyze code, save build artifacts, deploy, and more:
 # https://docs.microsoft.com/azure/devops/pipelines/languages/javascript
 
+schedules:
+- cron: 0 0 * 12 *
+  displayName: yearly schedule
+  branches:
+    include:
+    - main
+
 trigger:
 - main
 
