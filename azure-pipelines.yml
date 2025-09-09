@@ -17,5 +17,6 @@ steps:
 
 - script: |
     npm install
+    npm i typescript
     npm run cytest
   displayName: 'npm install and run Cypress tests'
