@@ -4,12 +4,13 @@
   "main": "ll",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "cytest":"npx cypress run --spec cypress/e2e/1-getting-started/todo.cy.js"
+    "cytest": "npx cypress run --spec cypress/e2e/1-getting-started/todo.cy.js"
   },
   "author": "",
   "license": "ISC",
   "description": "",
   "devDependencies": {
-    "cypress": "^15.1.0"
+    "cypress": "^15.1.0",
+    "typescipt": "^1.0.0"
   }
 }

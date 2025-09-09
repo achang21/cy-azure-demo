@@ -4,7 +4,7 @@
 # https://docs.microsoft.com/azure/devops/pipelines/languages/javascript
 
 schedules:
-- cron: 0 0 * 12 *
+- cron: 0 0 1 1 *
   displayName: yearly schedule
   branches:
     include:
@@ -23,7 +23,15 @@ steps:
   displayName: 'Install Node.js'
 
 - script: |
+    set -e  # Exit immediately if any command fails
     npm install
-    npm i typescript
     npm run cytest
   displayName: 'npm install and run Cypress tests'
+
+- task: Cache@2
+  inputs:
+    key: 'npm | "$(Agent.OS)" | package-lock.json'
+    restoreKeys: |
+      npm | "$(Agent.OS)"
+    path: node_modules
+  displayName: 'Cache node_modules'
