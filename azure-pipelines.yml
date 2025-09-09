@@ -33,6 +33,6 @@ steps:
 - script: |
     set -e  # Exit immediately if any command fails
     npm install
-    npm i -D typescript
+    npm i typescript
     npm run cytest
   displayName: 'npm install, install typescript and run Cypress tests'
