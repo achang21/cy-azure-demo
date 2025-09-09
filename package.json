@@ -3,7 +3,8 @@
   "version": "1.0.0",
   "main": "ll",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "cytest":"npx cypress run --spec cypress/e2e/1-getting-started/todo.cy.js"
   },
   "author": "",
   "license": "ISC",
